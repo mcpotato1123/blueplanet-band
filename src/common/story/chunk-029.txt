@@ -1,0 +1,128 @@
+p	xiaox_2	c	1	1	1	dumb_1
+s	小希	接下来只需要恢复DeepSleep的电力。
+s	无名	用这个。
+s	无名	这是发送无线电波的简易装置配备的便携式电池。
+s	无名	参照心脏起搏器的原理，将电池的两根电源线插在球形机器人后脑勺电源孔的位置。
+h	xiaox_2
+p	xiaox_1	c	5	1	3	dumb_1
+s	小希	DeepSleep看起来和长了头发一样呢。
+s	无名	开始了。
+s	我（心声）	随着我按动开关，DeepSleep的显示屏上逐渐有了光线。
+h	xiaox_1
+p	xiaox_2	l	5	1	3	dumb_1
+p	deep_1	c	6	-	-	
+s	DeepSleep	滋滋滋——启动。
+s	我（心声）	球形机器人慢慢升空，在1.2米左右的高度悬浮不动，黑色的屏幕再次出现一双眼睛。
+h	xiaox_2
+p	xiaox_1	c	5	1	3	dumb_1
+s	小希	你好，DeepSleep。
+p	deep_1	c	3	-	-	
+s	DeepSleep	嘀嘀嘀……
+s	无名	你好？
+s	我（心声）	我也和小希一样，试着朝它对话。
+p	deep_1	c	5	-	-	
+s	DeepSleep	爸爸？
+s	无名	谁？
+p	deep_1	c	5	-	-	
+s	DeepSleep	还有妈妈也在。
+s	无名	欸？
+s	DeepSleep	爸爸妈妈，我是你们制造出来的吗？
+s	DeepSleep	可是，机器人和人类是怎么创造生命的呢？
+s	无名	如果硬要说的话，也不是不能办到，但肯定不是生物学意义上的那种。
+b	Cockpit_broken3
+s	无名	不对！
+s	无名	这……算是恢复了吗？
+h	xiaox_1
+p	xiaox_2	c	6	2	5	dumb_1
+s	小希	唔……我看看书上写的。
+s	无名	绝对是看错了。
+p	deep_1	c	5	-	-	
+s	DeepSleep	爸爸，我的纳米复合神经纤维棒是不是在你那里？
+s	无名	呃，这个吗？
+s	无名	为什么会叫这样一个奇怪的名字？
+h	xiaox_2
+p	xiaox_1	c	1	1	1	dumb_1
+s	小希	您快点给他吧。
+s	无名	给你。
+s	我（心声）	我帮他把不明所以的装置装上。
+s	无名	还有，我不是你父亲。
+p	deep_1	c	2	-	-	
+s	DeepSleep	哇，为什么不要我……
+s	无名	这是碰瓷吗？指认生父要钱的那种？可以把它报废了吗？
+p	xiaox_1	c	1	2	5	blush,dumb_1
+s	小希	可是它叫我们爸爸妈妈欸。
+s	无名	你刚才到底输入了什么进去？
+p	deep_1	c	2	-	-	
+s	DeepSleep	爸爸看起来讨厌我……
+p	xiaox_1	c	6	1	6	blush,dumb_1
+s	小希	老师AND孩子他爸，您怎么可以讨厌它呢？
+s	无名	别捣乱了。
+s	我（心声）	我将简易电源拔掉，球形机器人失去了电源供给，显示屏上的表情慢慢消失。
+p	deep_1	c	6	-	-	
+s	DeepSleep	我怎么了？
+s	DeepSleep	我要死了吗？好疼……
+s	DeepSleep	临死前，请容我说上几句话……
+s	DeepSleep	嘀嘀嘀嘀……太空战舰在猎户星座端沿熊熊燃烧……万丈光芒在唐怀瑟之门的黑暗中闪耀……
+s	无名	它在说什么？
+h	xiaox_1
+p	xiaox_2	l	1	2	1	dumb_1
+s	小希	应该是它的遗言。
+h	deep_1
+s	DeepSleep	……
+p	xiaox_2	c	6	2	5	dumb_1
+s	小希	彻底死掉了。
+s	无名	重启吧。
+s	我（心声）	我将电源线重新插上。
+h	xiaox_2
+p	xiaox_1	c	1	2	5	dumb_1
+s	小希	唔……但是。
+s	无名	只是角色扮演而已，还有你怎么也在入戏啊。
+s	无名	因为都是机器人，所以有些难受吗？
+s	无名	还是想到了不好的回忆。
+p	xiaox_1	c	6	1	1	dumb_1
+s	小希	老师，我刚才翻看书籍才发现，DeepSleep的身体里有好多个人格意识。
+s	无名	你的意思是，刚才那个也是DeepSleep的一个意识？
+p	xiaox_1	c	1	1	5	dumb_1
+s	小希	嗯。
+s	无名	那只是残留的数据而已，继续吧。
+h	xiaox_1
+p	xiaox_2	c	1	1	1	dumb_1
+s	小希	明白了。
+s	我（心声）	小希的手重新开始在键盘上飞舞。
+s	我（心声）	嘀嘀嘀嘀……
+p	deep_1	c	5	-	-	
+p	deep_1	c	5	-	-	
+s	DeepSleep	你好，我是安卓，是按照您梦中情人一比一定制的仿生人……
+s	无名	出错了，重来。
+s	无名	什么安卓，我还雪梨呢，这也是它的其中一个意识吗？
+p	xiaox_2	c	1	1	1	dumb_1
+s	小希	嗯。
+s	无名	不是我们需要的人格意识。
+s	无名	再试一遍。
+h	deep_1
+s	我（心声）	我再度拔掉插头。
+p	deep_1	c	6	-	-	
+h	xiaox_2
+h	deep_1
+h	@fg
+b	black
+h	@fg
+b	Cockpit_broken3
+p	deep_1	c	5	-	-	
+p	deep_1	c	5	-	-	
+s	无名	你好，DeepSleep，你是谁？
+s	DeepSleep	我是由模控生命制造的仿生人hIE，生产的目的是服务人类，只拥有9年4个月的使用寿命。
+s	无名	还是不对，再试一次。
+p	deep_1	c	6	-	-	
+h	deep_1
+h	@fg
+b	black
+h	@fg
+b	Cockpit_broken3
+p	deep_1	c	3	-	-	
+s	无名	你好，DeepSleep，你是谁？
+s	DeepSleep	我是君士坦丁十一世，伟大的拜占庭帝国的末代皇帝——
+b	Cockpit_broken3
+s	无名	这回连机器都不是了啊！而且会有人自称自己是末代皇帝吗？
+s	无名	这也是它的人格吗？
+p	xiaox_1	l	1	1	3	dumb_1

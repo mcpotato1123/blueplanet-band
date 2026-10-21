@@ -1,0 +1,128 @@
+p	xiaox_2	c	6	2	5	dumb_1
+s	小希	老师，您没事吧？
+s	我（心声）	和上次抓鱼时的场景一模一样，但依旧没能躲开。
+s	我（心声）	我摸着脑袋，眼前的地上出现了一个球体。
+s	我（心声）	小希朝着我的方向单膝跪地，正对着那颗地上躺着的球体。
+p	xiaox_2	l	5	1	3	dumb_1
+s	小希	你好，DeepSleep。
+s	我（心声）	随着小希声音落下，眼前的球体中间漆黑的部分变成显示屏，一双数码眼睛也随之出现。
+p	deep_1	c	1	-	-	
+s	无名	这是什么？
+h	xiaox_2
+p	xiaox_1	c	1	1	3	dumb_1
+s	小希	是仿生人助手DeepSleep，飞船维修专家。
+p	deep_1	c	1	-	-	
+s	DeepSleep	思考：系统激活成功。
+s	我（心声）	我朝后一个踉跄，那个球体垂直上升，飞到了和我胸腔平行的高度。
+p	deep_1	c	1	-	-	
+s	DeepSleep	你好，我是DeepSleep，请问有什么可以帮您？
+s	无名	是很符合AI设定的开场白，不过——
+s	无名	为什么发出的只是奇怪的嘟囔？
+p	xiaox_1	c	1	1	5	dumb_1
+s	小希	文学影视作品中角色能互相听懂各自的语言不是很正常的一件事吗？
+s	无名	这种理由说出来真的没问题吗？
+h	xiaox_1
+p	xiaox_2	c	1	1	3	dumb_1
+s	小希	嗯……其实是因为DeepSleep装载了高性能脑电波感应发生器。
+s	小希	可以跨越语音障碍，直接将信息输入对方大脑。
+s	无名	那岂不是都没有办法隔绝？如果这种机器人太多，岂不是整个脑瓜子都嗡嗡的？
+p	deep_1	c	3	-	-	
+s	DeepSleep	说明：稍等一下。
+p	deep_1	c	2	-	-	
+b	ForestRoad_daytime_no_fire
+p	deep_1	r	1	-	-	
+s	无名	啊！
+s	无名	为什么撞我？
+p	deep_1	r	3	-	-	
+s	DeepSleep	……
+s	无名	它在做什么？
+p	xiaox_2	c	1	1	3	dumb_1
+s	小希	它说通过撞击可以解除脑电波的交流。
+s	无名	倒是没有听见声音了，恢复吧。
+p	deep_1	c	1	-	-	
+s	DeepSleep	……
+s	无名	什么，翻译一下。
+h	xiaox_2
+p	xiaox_1	c	1	2	1	dumb_1
+s	小希	那需要再次撞击一下哦。
+p	deep_1	c	2	-	-	
+b	ForestRoad_daytime_no_fire
+p	deep_1	r	1	-	-	
+s	无名	啊！
+h	xiaox_1
+h	deep_1
+h	@fg
+b	Cockpit_broken1
+p	xiaox_2	c	1	1	1	dumb_1
+p	deep_1	r	1	-	-	
+s	我（心声）	随后，我们回到“冯诺依曼”号驾驶舱中。
+s	无名	为什么要在这种方面设置这么高级的功能，它是做什么用的？
+p	deep_1	c	1	-	-	
+s	DeepSleep	自我介绍：你好，我是海蓝星学院的工程类机器人，主要用于解决各类机械故障，您可以通过官网获取我的详细功能，也可以拨打电话进行报修。
+h	xiaox_2
+p	xiaox_1	c	5	1	3	dumb_1
+s	小希	你好，DeepSleep，你能帮老师修理飞船吗？
+p	deep_1	c	3	-	-	
+s	DeepSleep	分析中：思考，思考。
+s	我（心声）	就这样过去了很长时间。
+s	无名	你还好吗？
+s	我（心声）	……
+s	无名	为什么没有反应。
+p	xiaox_1	c	1	1	1	dumb_1
+s	小希	老师，您要在请求前加上“你好，DeepSleep”才行。
+s	无名	这种落后的语音指示型废铁真的有用吗？
+s	无名	喂，我问你能修飞船吗？
+p	deep_1	c	6	-	-	
+s	我（心声）	……
+s	我（心声）	迫于无奈，我不得不照着小希的说法对话。
+s	无名	你好，DeepSleep，你能帮我修理飞船吗？
+p	deep_1	c	1	-	-	
+s	DeepSleep	收到指令：卡死已修复，滋滋滋——启动。
+s	我（心声）	DeepSleep慢慢升空，之后悬浮不动，黑色的屏幕出现一双眼睛。
+p	deep_1	c	3	-	-	
+s	DeepSleep	询问：猩猩先生，请问你的飞船是什么型号？
+b	Cockpit_broken1
+s	无名	你才猩猩啊！
+p	deep_1	c	4	-	-	
+s	DeepSleep	反驳：我是海蓝星学院的工程类机器人，并非猩猩。
+s	DeepSleep	询问：猩猩先生，请问你的飞船是什么型号？
+s	无名	……你不需要知道型号，只需要检测就行。
+p	deep_1	c	6	-	-	
+s	DeepSleep	……
+s	无名	又是没添加前缀吗……
+s	无名	你好，DeepSleep……你不需要知道，只需要检测就行。
+p	deep_1	c	3	-	-	
+s	DeepSleep	收到请求——查询中。
+p	deep_1	c	1	-	-	
+s	DeepSleep	对不起，很抱歉，经过查询，没有找到您的飞船型号。
+b	Cockpit_broken1
+s	无名	一点用也没有啊！
+h	xiaox_1
+h	deep_1
+s	我（心声）	又过去了很长时间。
+s	我（心声）	我走到外面透了透气。
+h	@fg
+b	black
+h	@fg
+b	ForestRoad_daytime_no_fire
+s	无名	小希，它真的能修飞船吗？
+p	xiaox_2	c	1	2	5	dumb_1
+s	小希	唔……博士和老师们说无论是什么飞船，DeepSleep都能修好。
+s	无名	那它为什么像一个垃圾一样被扔在这里了呢？
+p	xiaox_2	c	1	2	1	dumb_1
+s	小希	不知道。
+h	xiaox_2
+p	xiaox_1	c	5	1	3	dumb_1
+s	小希	但我相信DeepSleep一定能帮助老师！
+s	无名	如果它出现了失误，你打算怎么负责呢？
+h	xiaox_1
+p	xiaox_2	c	1	2	5	dumb_1
+s	小希	唔……
+s	我（心声）	我靠近小希，盯着她的眼睛。
+h	xiaox_2
+p	xiaox_1	c	1	2	5	blush,dumb_1
+s	我（心声）	因为我的凑近，她的视线急忙躲闪，脸颊泛起微红。
+p	xiaox_1	c	6	2	5	blush,dumb_1
+s	无名	为什么这么执着于帮助我修飞船？
+s	无名	你就不害怕，我修好飞船以后逃跑吗？
+h	xiaox_1

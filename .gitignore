@@ -1,0 +1,9 @@
+node_modules/
+build/
+.temp_*/
+.edge*/
+.npm-cache/
+sign/
+*.log
+.DS_Store
+Thumbs.db

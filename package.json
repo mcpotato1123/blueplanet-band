@@ -1,0 +1,21 @@
+{
+  "name": "blueplanet-band",
+  "private": true,
+  "version": "1.0.0",
+  "description": "《海蓝星之梦》小米手环 9 Pro Vela 快应用移植（galgod-band 引擎/UI 结构）",
+  "scripts": {
+    "build": "node tools/build.js",
+    "release": "node tools/build.js release",
+    "start": "aiot start",
+    "story": "python tools/build_story.py",
+    "assets": "python tools/build_assets.py",
+    "sim": "python tools/build_sim.py"
+  },
+  "devDependencies": {
+    "aiot-toolkit": "2.0.5",
+    "@aiot-toolkit/jsc": "^1.0.9"
+  },
+  "browserslist": [
+    "chrome 65"
+  ]
+}
