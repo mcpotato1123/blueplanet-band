@@ -7,19 +7,19 @@ h	xiaox_2
 p	xiaox_1	c	5	1	3	dumb_1
 s	小希	DeepSleep看起来和长了头发一样呢。
 s	无名	开始了。
-s	我（心声）	随着我按动开关，DeepSleep的显示屏上逐渐有了光线。
+s		随着我按动开关，DeepSleep的显示屏上逐渐有了光线。
 h	xiaox_1
 p	xiaox_2	l	5	1	3	dumb_1
 p	deep_1	c	6	-	-	
 s	DeepSleep	滋滋滋——启动。
-s	我（心声）	球形机器人慢慢升空，在1.2米左右的高度悬浮不动，黑色的屏幕再次出现一双眼睛。
+s		球形机器人慢慢升空，在1.2米左右的高度悬浮不动，黑色的屏幕再次出现一双眼睛。
 h	xiaox_2
 p	xiaox_1	c	5	1	3	dumb_1
 s	小希	你好，DeepSleep。
 p	deep_1	c	3	-	-	
 s	DeepSleep	嘀嘀嘀……
 s	无名	你好？
-s	我（心声）	我也和小希一样，试着朝它对话。
+s		我也和小希一样，试着朝它对话。
 p	deep_1	c	5	-	-	
 s	DeepSleep	爸爸？
 s	无名	谁？
@@ -44,7 +44,7 @@ h	xiaox_2
 p	xiaox_1	c	1	1	1	dumb_1
 s	小希	您快点给他吧。
 s	无名	给你。
-s	我（心声）	我帮他把不明所以的装置装上。
+s		我帮他把不明所以的装置装上。
 s	无名	还有，我不是你父亲。
 p	deep_1	c	2	-	-	
 s	DeepSleep	哇，为什么不要我……
@@ -57,7 +57,7 @@ s	DeepSleep	爸爸看起来讨厌我……
 p	xiaox_1	c	6	1	6	blush,dumb_1
 s	小希	老师AND孩子他爸，您怎么可以讨厌它呢？
 s	无名	别捣乱了。
-s	我（心声）	我将简易电源拔掉，球形机器人失去了电源供给，显示屏上的表情慢慢消失。
+s		我将简易电源拔掉，球形机器人失去了电源供给，显示屏上的表情慢慢消失。
 p	deep_1	c	6	-	-	
 s	DeepSleep	我怎么了？
 s	DeepSleep	我要死了吗？好疼……
@@ -72,7 +72,7 @@ s	DeepSleep	……
 p	xiaox_2	c	6	2	5	dumb_1
 s	小希	彻底死掉了。
 s	无名	重启吧。
-s	我（心声）	我将电源线重新插上。
+s		我将电源线重新插上。
 h	xiaox_2
 p	xiaox_1	c	1	2	5	dumb_1
 s	小希	唔……但是。
@@ -88,8 +88,8 @@ s	无名	那只是残留的数据而已，继续吧。
 h	xiaox_1
 p	xiaox_2	c	1	1	1	dumb_1
 s	小希	明白了。
-s	我（心声）	小希的手重新开始在键盘上飞舞。
-s	我（心声）	嘀嘀嘀嘀……
+s		小希的手重新开始在键盘上飞舞。
+s		嘀嘀嘀嘀……
 p	deep_1	c	5	-	-	
 p	deep_1	c	5	-	-	
 s	DeepSleep	你好，我是安卓，是按照您梦中情人一比一定制的仿生人……
@@ -100,7 +100,7 @@ s	小希	嗯。
 s	无名	不是我们需要的人格意识。
 s	无名	再试一遍。
 h	deep_1
-s	我（心声）	我再度拔掉插头。
+s		我再度拔掉插头。
 p	deep_1	c	6	-	-	
 h	xiaox_2
 h	deep_1

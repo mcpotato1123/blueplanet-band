@@ -15,6 +15,6 @@ function hasSprite(tag, file) {
 }
 
 
-window.XBY_ASSETS = { BG: BG, CG: CG, SPRITES: SPRITES, bgPath: bgPath,
+window.XBY_ASSETS = { BG: BG, CG: CG, CG_WIDE: CG_WIDE, SPRITES: SPRITES, bgPath: bgPath,
   cgPath: cgPath, cgThumb: cgThumb, spritePath: spritePath, hasSprite: hasSprite };
 })();

@@ -21,7 +21,7 @@
     <image class="sp" style="{{spRbStyle}}" src="{{spRb}}" if="{{spRb}}" onswipe="onSwipe"></image>
 
     <!-- CG 层 -->
-    <image class="layer" src="{{cgSrc}}" if="{{cgSrc}}" onswipe="onSwipe"></image>
+    <image class="layer" style="{{cgStyle}}" src="{{cgSrc}}" if="{{cgSrc}}" onswipe="onSwipe"></image>
 
     <!-- 顶部信息 -->
     <div class="hud" if="{{!uiHidden && !menu && !endText}}">
@@ -96,8 +96,7 @@
   .bg { position: absolute; top: 0px; left: 0px; width: 672px; height: 480px; object-fit: cover; }
   .solid { position: absolute; top: 0px; left: 0px; width: 336px; height: 480px;
            background-color: #ffffff; }
-  .layer { position: absolute; top: 0px; left: 0px; width: 336px; height: 480px;
-           object-fit: cover; }
+  .layer { position: absolute; top: 0px; left: 0px; height: 480px; object-fit: fill; }
   .sp { position: absolute; object-fit: contain; }
 
   /* 顶部只留一行小字 */
@@ -152,7 +151,7 @@ import router from '@system.router'
 import prompt from '@system.prompt'
 import file from '@system.file'
 import brightness from '@system.brightness'
-import { CG, SPRITES, bgPath, cgPath, spritePath, hasSprite } from '../../common/assets.js'
+import { CG, CG_WIDE, SPRITES, bgPath, cgPath, spritePath, hasSprite } from '../../common/assets.js'
 import {
   DEFAULT_SETTINGS, autoDelay, layout, paginateText,
   loadSettings, saveSettings, loadSaves, saveSaves, loadAutoSave, saveAutoSave,
@@ -207,6 +206,7 @@ export default {
     spC: '', spCf: '', spCb: '', spCfStyle: '', spCbStyle: '',
     spR: '', spRf: '', spRb: '', spRfStyle: '', spRbStyle: '',
     cgSrc: '',
+    cgStyle: 'left: 0px; width: 853px; height: 480px;',
     speaker: '',
     l0: '', l1: '', l2: '', l3: '', l4: '', l5: '',
     s0: '', s1: '', s2: '', s3: '', s4: '', s5: '',
@@ -245,6 +245,11 @@ export default {
     this.bgOffset = 0
     this.bgDir = 1
     this.bgKey = ''
+    this.cgTimer = null
+    this.cgKey = ''
+    this.cgWide = 853
+    this.cgOffset = 0
+    this.cgDir = 1
     this.advanceCount = 0
     this.hist = []
     this.seen = {}
@@ -280,6 +285,7 @@ export default {
       this.applyKeepOn()
     })
     if (this.bgSrc && !this.cgSrc) this.startPan()
+    if (this.cgSrc) this.startCgPan()
   },
 
   onBackPress() {
@@ -294,6 +300,7 @@ export default {
     if (this.timer) { clearTimeout(this.timer); this.timer = null }
     if (this.autoTimer) { clearTimeout(this.autoTimer); this.autoTimer = null }
     if (this.bgTimer) { clearInterval(this.bgTimer); this.bgTimer = null }
+    if (this.cgTimer) { clearInterval(this.cgTimer); this.cgTimer = null }
     if (this.holdTimer) { clearTimeout(this.holdTimer); this.holdTimer = null }
     this.typingToken++
   },
@@ -403,7 +410,19 @@ export default {
     }
     this.bgSrc = bgKey ? bgPath(bgKey) : ''
     this.showBlack = !this.bgSrc
-    this.cgSrc = s.fg ? cgPath(s.fg) : ''
+
+    const cgKey = s.fg || ''
+    if (cgKey !== this.cgKey) {
+      this.cgKey = cgKey
+      this.cgWide = CG_WIDE[cgKey] || 853
+      this.cgOffset = 0
+      this.cgDir = 1
+      this.cgStyle = 'left: 0px; width: ' + this.cgWide + 'px; height: 480px;'
+      this.stopCgPan()
+    }
+    this.cgSrc = cgKey ? cgPath(cgKey) : ''
+    if (this.cgSrc) this.startCgPan()
+    else this.stopCgPan()
     if (this.bgSrc && !this.cgSrc) this.startPan()
     else this.stopPan()
 
@@ -766,6 +785,22 @@ export default {
 
   stopPan() {
     if (this.bgTimer) { clearInterval(this.bgTimer); this.bgTimer = null }
+  },
+
+  startCgPan() {
+    if (this.cgTimer || !this.cgWide) return
+    this.cgTimer = setInterval(() => {
+      if (this.menu || this.endText) return
+      this.cgOffset += BG_STEP * this.cgDir
+      const max = Math.max(0, this.cgWide - 336)
+      if (this.cgOffset >= max) { this.cgOffset = max; this.cgDir = -1 }
+      if (this.cgOffset <= 0) { this.cgOffset = 0; this.cgDir = 1 }
+      this.cgStyle = 'left: -' + this.cgOffset + 'px; width: ' + this.cgWide + 'px; height: 480px;'
+    }, BG_TICK)
+  },
+
+  stopCgPan() {
+    if (this.cgTimer) { clearInterval(this.cgTimer); this.cgTimer = null }
   },
 
   // ---------------------------------------------------------------- 屏幕常亮

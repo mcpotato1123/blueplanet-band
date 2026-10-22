@@ -73,6 +73,7 @@ const SPRITE_SIZES = { 1: [200, 400, 80], 2: [168, 336, 144], 3: [110, 220, 260]
 
   let pages = [['']], pageIdx = 0, pageText = '', typing = 0, typingToken = 0
   let typingTimer = null, autoTimer = null, bgTimer = null, bgOffset = 0, bgDir = 1
+  let cgTimer = null, cgOffset = 0, cgDir = 1, cgWide = 853, cgKey = ''
   let choices = [], menuOpen = false, ended = false, history = []
   let running = false
 
@@ -90,7 +91,24 @@ const SPRITE_SIZES = { 1: [200, 400, 80], 2: [168, 336, 144], 3: [110, 220, 260]
     }
     const cgSrc = st.fg ? A.cgPath(st.fg) : ''
     $('cg').style.display = cgSrc ? 'block' : 'none'
-    if (cgSrc) $('cg').setAttribute('src', cgSrc)
+    if (cgSrc) {
+      $('cg').setAttribute('src', cgSrc)
+      if (st.fg !== cgKey) {
+        cgKey = st.fg
+        cgWide = (A.CG_WIDE && A.CG_WIDE[st.fg]) || 853
+        cgOffset = 0
+        cgDir = 1
+        $('cg').style.width = cgWide + 'px'
+        $('cg').style.height = '480px'
+        $('cg').style.objectFit = 'fill'
+        $('cg').style.left = '0px'
+        stopCgPan()
+      }
+      if (!cgTimer) startCgPan()
+    } else {
+      cgKey = ''
+      stopCgPan()
+    }
 
     const slots = VM.slotChars(st.chars)
     const order = []
@@ -292,11 +310,24 @@ const SPRITE_SIZES = { 1: [200, 400, 80], 2: [168, 336, 144], 3: [110, 220, 260]
     }, 100)
   }
   function stopPan() { if (bgTimer) { clearInterval(bgTimer); bgTimer = null } }
+  function startCgPan() {
+    if (cgTimer) return
+    cgTimer = setInterval(() => {
+      if (menuOpen || ended) return
+      cgOffset += 4 * cgDir
+      const max = Math.max(0, cgWide - 336)
+      if (cgOffset >= max) { cgOffset = max; cgDir = -1 }
+      if (cgOffset <= 0) { cgOffset = 0; cgDir = 1 }
+      $('cg').style.left = '-' + cgOffset + 'px'
+    }, 100)
+  }
+  function stopCgPan() { if (cgTimer) { clearInterval(cgTimer); cgTimer = null } }
 
   // ------------------------------------------------------------ screens
   function showTitle() {
     running = false
     stopPan()
+    stopCgPan()
     $('titleScr').style.display = 'block'
     $('chapScr').style.display = 'none'
     $('menu').style.display = 'none'

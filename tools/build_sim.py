@@ -32,7 +32,7 @@ def build_assets():
     code = strip_module(open(os.path.join(SRC, 'assets.js'), encoding='utf-8').read())
     code = code.replace("'/common/img/", "'../src/common/img/")
     out = ['(function () {', code, '',
-           'window.XBY_ASSETS = { BG: BG, CG: CG, SPRITES: SPRITES, bgPath: bgPath,',
+           'window.XBY_ASSETS = { BG: BG, CG: CG, CG_WIDE: CG_WIDE, SPRITES: SPRITES, bgPath: bgPath,',
            '  cgPath: cgPath, cgThumb: cgThumb, spritePath: spritePath, hasSprite: hasSprite };',
            '})();']
     return '\n'.join(out)

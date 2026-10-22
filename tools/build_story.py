@@ -65,7 +65,7 @@ WHO = {
     "npc": "NPC",
     "npc2": "NPC2",
     "diary": "日记",
-    "x": "我（心声）",
+    "x": "",
     "narrator": "",
     "nvl_narrator_outline": "",
     "NVL": "",
